@@ -1,0 +1,29 @@
+<div class="login-form">
+	<h2 class="text-center">User Register</h2>
+    <form name="form" ng-submit="login()" role="form">
+		<div class="avatar">
+			<img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="img-circle" alt="Avatar">
+		</div>           
+        <div class="form-group">
+            <input type="text" name="username" class="form-control input-lg" ng-model="username" placeholder="Create your username here" required />
+        </div>
+		<div class="form-group">
+            <input type="password" name="password" class="form-control input-lg" ng-model="password" placeholder="Create strong password here" required />
+        </div>
+        <div class="form-group">
+            <input type="text" name="email" class="form-control input-lg" ng-model="email" placeholder="Enter Your E-mail Address" required />
+        </div>       
+        <div class="form-group">
+            <input type="number" name="phone" class="form-control input-lg" ng-model="phone" placeholder="Enter your Phone Number" required />
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="tnc" ng-model="tnc" required />
+            I agree to the terms and conditions of company
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Register</button>
+        </div>
+		<p class="hint-text">Already have an account? <a routerLink="/login">Login here</a></p>
+    </form>
+    <div class="form-footer"><a routerLink="/forgot">Forgot Your Password?</a></div>
+</div>

@@ -1,0 +1,105 @@
+body{
+    margin: 0px;
+    font-family: Verdana;
+}
+#topnav{
+    padding: 10px;
+    background-color: #4bb543;
+    margin: 0px;
+    text-align: center;
+}
+#topnav a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 50px;
+}
+#topnav a:hover{
+    color: #37d12c;
+}
+#wrapper{
+    width: 80%;
+    padding: 10px;
+}
+footer{
+    padding: 20px;
+    height: 60px;
+    background-color:#4bb543;
+    color: #fff;
+    text-align: center;
+}
+.center{
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    height: auto;
+    align-content: start;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    margin:0px 50px 0px;
+  }
+  .grid-container > div {
+    background-color: #a3f89d;
+    border-radius: 10px;
+    text-align: start;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+    .grid-container {
+        display: grid;
+        height: auto;
+        align-content: start;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+        padding: 10px;
+        margin:0px 50px 0px;
+      }
+      .grid-container > div {
+        background-color: #a3f89d;
+        border-radius: 10px;
+        text-align: start;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    .center{
+        text-align: center;
+    }
+  }
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        height: auto;
+        align-content: start;
+        grid-template-columns: auto;
+        grid-gap: 20px;
+        padding: 10px;
+        margin:0px 50px 0px;
+      }
+      .grid-container > div {
+        background-color: #a3f89d;
+        border-radius: 10px;
+        text-align: start;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    .center{
+        text-align: center;
+    }
+  }
+
+  .in{
+      display: inline;
+      text-align: start;
+  }
+  .right{
+      float: right;
+  }
+  .clearblock{
+      clear: both;
+  }

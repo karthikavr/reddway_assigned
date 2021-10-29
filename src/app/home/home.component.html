@@ -1,0 +1,27 @@
+<nav id="topnav">
+  <a routerLink="/home">View Posts</a>
+  <a (click)="logout()">Logout</a>
+</nav>
+<div class="wrapper">
+  <div class="text-center">
+    <h1>Total Posts Available : {{posts.length}}</h1>
+    <p>Search here <input type="text" name="search" [(ngModel)]="searchkey"></p>
+  </div>
+  <div class="grid-container">
+    <div
+      *ngFor="let post of posts | filter: searchkey | paginate: { itemsPerPage: 10, currentPage: p }; let id = index">
+      <div>
+        <h4 class="in"><b>UserId:</b> {{post.userId}}</h4>
+        <p class="in right"><b>Post Id:</b> {{post.id}}</p>
+      </div>
+      <p><b>Post Title:</b> {{post.title}} <br> <b>Post Body:</b> {{post.body}}</p>
+    </div>
+  </div>
+  <div class="clearblock"></div>
+  <div class="center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
+<footer>
+  <p>Copyright &copy; reddway.in | All rights reserved</p>
+</footer>
